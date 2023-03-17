@@ -1,33 +1,29 @@
 .btn {
   display: inline-block;
-  padding: 18px 28px;
-
+  padding: 20px 90px;
+  max-width: 272px;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  border: 1px solid transparent;
-  border-radius: 5px;
+  border: 1px solid --violet-bg;
+  border-radius: 16px;
 
-  color: var(--white-txt-cl);
-  background-color: var(--accent-cl);
+  color: var(--white-bg);
+  background-color: var(--violet-bg);
 
-  transition: color var(--fast) linear, background-color var(--fast) linear,
-    border var(--fast) linear;
+/*   transition: color var(--fast) linear, background-color var(--fast) linear,
+    border var(--fast) linear; */
 
   &:hover,
   &:focus {
     color: var(--accent-cl);
-    border: 1px solid var(--accent-cl);
-    background-color: var(--white-bg);
+    border: 1px solid var(--green-bg);
+    background-color: var(--green-bg);
   }
 
-  @include mq(mobile-only) {
-    min-width: 250px;
-    max-width: 280px;
-  }
   @include mq(tablet) {
-    padding: 18px 52px;
+    padding: 20px 42px;
+    max-width: 176px;
   }
 }
