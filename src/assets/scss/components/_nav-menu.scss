@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav-list {
+  display: none;
+  @include mq(desktop) {
+    display: flex;
+  }
+}

@@ -1,0 +1,10 @@
+.header {
+  padding-top: 12px;
+  &__container {
+    display: flex;
+    align-items: center;
+    @include mq(mobile-only) {
+      justify-content: space-between;
+    }
+  }
+}

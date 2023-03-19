@@ -12,6 +12,7 @@ const mode = require('gulp-mode')();
 const testFolder = './src/projects/pages/';
 const paths = require('../paths');
 const fs = require('fs');
+const cleanCSS = require('gulp-clean-css');
 
 const css = done => {
   return gulp
@@ -25,6 +26,7 @@ const css = done => {
         errLogToConsole: true,
       }).on('error', sass.logError),
     )
+    .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(mode.production(gcmq()))
     .pipe(mode.production(postcss([autoprefixer(), cssnano()])))
     .pipe(mode.development(sourcemaps.write()))
