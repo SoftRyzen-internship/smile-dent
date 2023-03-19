@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const nunjucks = require('gulp-nunjucks');
+// const nunjucks = require('gulp-nunjucks');
 const data = require('gulp-data');
 const nunjucksRender = require('gulp-nunjucks-render');
 const htmlmin = require('gulp-htmlmin');
@@ -21,27 +21,29 @@ const manageEnvironment = function (environment) {
   });
 };
 
-const getDataForFile = file => {
-  return require('../../src/json/data.json');
-};
+// const getDataForFile = file => {
+//   return require('../../src/json/data.json');
+// };
 
 const html = () => {
-  return gulp
-    .src(paths.src.html)
-    .pipe(data(getDataForFile))
-    .pipe(
-      nunjucksRender({
-        path: ['src/html/partials'],
-        manageEnv: manageEnvironment, // set up the environment using the additional filter
-        envOptions: {
-          autoescape: false,
-        },
-        watch: true,
-      }),
-    )
-    .pipe(mode.production(htmlmin(htmlminConfig)))
-    .pipe(mode.production(cachebust(cachebustConfig)))
-    .pipe(gulp.dest(paths.build.html));
+  return (
+    gulp
+      .src(paths.src.html)
+      // .pipe(data(getDataForFile))
+      .pipe(
+        nunjucksRender({
+          path: ['src/html/partials'],
+          manageEnv: manageEnvironment, // set up the environment using the additional filter
+          envOptions: {
+            autoescape: false,
+          },
+          watch: true,
+        }),
+      )
+      .pipe(mode.production(htmlmin(htmlminConfig)))
+      .pipe(mode.production(cachebust(cachebustConfig)))
+      .pipe(gulp.dest(paths.build.html))
+  );
 };
 
 module.exports = { html };

@@ -1,30 +1,25 @@
-@function HexToRGB($hex) {
-  @return red($hex), green($hex), blue($hex);
-}
-
 :root {
-  --accent-cl: #ff6b08;
-  --secondary-accent-cl: #9f4615;
-
-  /* TEXT COLORS */
+   /* TEXT COLORS */
+  --accent-txt-cl: #FFFFFF;
   --primary-txt-cl: #4B5563;
   --secondary-txt-cl: #637381;
 
   /* BACKGROUND COLORS */
   --primary-bg: #EBF8FF;
-  --green-bg: #1FA6B4;
-  --violet-bg: #6E6BD9;
-  --blue-bg: #EBF8FF;
-  --white-bg: #FFFFFF;
+  --normal-bg: #6E6BD9;
+  --hover-bg: #1FA6B4;
+  --active-bg: #6360C1;
+  --footer-bg: #E1F5FF;
 
   /* SHADOW */
 
   --main-shadow: box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.25);
 
   /* FONTS */
-  --main-font: 'Montserrat-Medium', sans-serif;
-  --main-font-semiBold: 'Montserrat-SemiBold', sans-serif;
-  --main-font-bold: 'Montserrat-Bold', sans-serif;
+  --main-font: 'Montserrat', sans-serif;
+  --second-font: 'Inter', sans-serif;
+  --logo-font: 'Barlow', sans-serif;
+
 
   /* ANIMATIONS SPEED */
   --fast: 0.2s;

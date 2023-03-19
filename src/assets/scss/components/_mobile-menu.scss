@@ -1,0 +1,5 @@
+.mobile-menu {
+  @include mq(desktop) {
+    display: none;
+  }
+}

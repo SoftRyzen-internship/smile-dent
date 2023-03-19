@@ -1,4 +1,5 @@
 @import './vendors/modern-normalize';
+@import './vendors/slick';
 
 @import './utils/mixins';
 @import './utils/variables';
@@ -8,8 +9,20 @@
 @import './base/container';
 @import './base/section';
 
+@import './components/buttons';
+@import './components/form';
+@import './components/mobile-menu';
+@import './components/nav-menu';
+@import './components/modal';
 
+@import './layouts/header';
 
+@import './sections/hero';
+@import './sections/about_us';
+@import './sections/our_service';
+@import './sections/our_team';
+@import './sections/our_reviews';
+@import './sections/booking';
+@import './sections/contacts';
 
-
-
+@import './layouts/footer';

@@ -1,4 +1,14 @@
-@include font-face('Montserrat-Medium', '../fonts/Montserrat-Medium', 500);
-@include font-face('Montserrat-SemiBold', '../fonts/Montserrat-SemiBold', 600);
-@include font-face('Montserrat-Bold', '../fonts/Montserrat-Bold', 700);
+// Montserrat
+@include font-face('Montserrat', '../fonts/Montserrat/Montserrat-Light', 300);
+@include font-face('Montserrat', '../fonts/Montserrat/Montserrat-Regular', 400);
+@include font-face('Montserrat', '../fonts/Montserrat/Montserrat-Medium', 500);
+@include font-face('Montserrat', '../fonts/Montserrat/Montserrat-SemiBold', 600);
+@include font-face('Montserrat', '../fonts/Montserrat/Montserrat-Bold', 700);
+@include font-face('Montserrat', '../fonts/Montserrat/Montserrat-ExtraBold', 800);
 
+// Inter
+@include font-face('Inter', '../fonts/Inter/Inter-Medium', 500);
+@include font-face('Inter', '../fonts/Inter/Inter-SemiBold', 600);
+
+// Barlow
+@include font-face('Barlow', '../fonts/Barlow/Barlow-Medium', 500);
