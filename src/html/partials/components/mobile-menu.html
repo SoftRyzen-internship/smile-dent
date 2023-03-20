@@ -1,3 +1,51 @@
 <div class="mobile-menu" data-menu>
-  <div class="container">{% include 'components/nav-menu.html' %}</div>
+  <div class="container">
+    <div class="nav__mobile">
+      <ul class="nav__mobile-list">
+        <li class="nav__mobile-item">
+          <a href="#home" class="nav__mobile-link">Home</a>
+        </li>
+        <li class="nav__mobile-item">
+          <a href="#about-us" class="nav__mobile-link">About us</a>
+        </li>
+        <li class="nav__mobile-item">
+          <a href="#our-services" class="nav__mobile-link">Our services</a>
+        </li>
+        <li class="nav__mobile-item">
+          <a href="#our-team" class="nav__mobile-link">Our Team</a>
+        </li>
+        <li class="nav__mobile-item">
+          <a href="#reviews" class="nav__mobile-link">Reviews</a>
+        </li>
+        <li class="nav__mobile-item">
+          <a href="#contacts" class="nav__mobile-link">Contacts</a>
+        </li>
+      </ul>
+      <button class="nav__mobile-btn btn">Contact us</button>
+      <ul class="nav__mobile-contacts-list">
+        <li class="nav__mobile-contacts-item">
+          <div class="nav__mobile-icon-wrapper">
+            <svg class="nav__mobile-icon" height="11" width="11" aria-label="phone">
+              <use href="./assets/images/sprite.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <div class="nav__mobile-number-wrapper">
+            <p class="nav__mobile-label">Phone Number</p>
+            <a href="tel:+442074071668" class="nav__mobile-contacts-title">+44 20 7407 1668</a>
+          </div>
+        </li>
+        <li class="nav__mobile-contacts-item">
+          <div class="nav__mobile-icon-wrapper">
+            <svg class="nav__mobile-icon" height="11" width="11" aria-label="address">
+              <use href="./assets/images/sprite.svg#icon-navigate"></use>
+            </svg>
+          </div>
+          <div class="nav__mobile-address-wrapper">
+            <p class="nav__mobile-label">London</p>
+            <p class="nav__mobile-address-contacts-title">401 Broadway</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>

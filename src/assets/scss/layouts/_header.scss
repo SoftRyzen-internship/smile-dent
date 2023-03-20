@@ -1,10 +1,14 @@
 .header {
-  padding-top: 12px;
-  &__container {
+  padding: 12px 0 16px;
+
+  @include mq(tablet) {
+    padding-top: 20px;
+  }
+  /* &__container {
     display: flex;
     align-items: center;
     @include mq(mobile-only) {
       justify-content: space-between;
     }
-  }
+  } */
 }
