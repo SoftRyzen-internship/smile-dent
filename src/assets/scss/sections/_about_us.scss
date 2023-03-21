@@ -15,15 +15,27 @@
     }
   }
   &__img {
-    img {
-      @include mq(tablet-only) {
-        width: 336px;
-        height: auto;
-      }
-      @include mq(desktop) {
-        width: 592px;
-        height: auto;
-      }
+    @include mq(mobile-only) {
+      background-image: url('../images/about-us/ellipse-blur-272.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    @include mq(tablet-only) {
+      width: 336px;
+      height: auto;
+      background-image: url('../images/about-us/ellipse-blur-336.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    @include mq(desktop) {
+      width: 592px;
+      height: auto;
+      background-image: url('../images/about-us/ellipse-blur-592.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
     }
   }
 }
@@ -50,8 +62,10 @@
       margin-bottom: 8px;
     }
     @include mq(tablet) {
-      font-size: 16px;
       margin-bottom: 16px;
+    }
+    @include mq(desktop) {
+      font-size: 16px;
     }
   }
   &__title {
