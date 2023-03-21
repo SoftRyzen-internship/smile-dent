@@ -1,3 +1,28 @@
+.mobile-menu-overlay--is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu-overlay {
+  background-color: transparent;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity var(--slow) var(--transition-timing-function);
+  z-index: 199;
+
+  @include mq(tablet) {
+    background-color: rgba(235, 248, 255, 0.7);
+  }
+
+  @include mq(desktop) {
+    display: none;
+  }
+}
+
 .mobile-menu {
   padding: 59px 0 40px;
   transform: translateX(100%);
@@ -10,12 +35,18 @@
   z-index: 200;
   transition: transform 250ms;
   overflow: auto;
+
   @include mq(tablet) {
     max-width: 320px;
     top: 0;
     right: 0;
     left: auto;
     overflow: hidden;
+    padding: 90px 0 40px;
+  }
+
+  @include mq(desktop) {
+    display: none;
   }
 
   &--opened {
@@ -57,12 +88,22 @@
     display: block;
     margin: 0 auto;
     margin-top: 119px;
+
+    @include mq(tablet) {
+      display: none;
+      pointer-events: none;
+    }
   }
 
   .nav__mobile-contacts-list {
     margin-top: 24px;
     display: flex;
     justify-content: space-between;
+
+    @include mq(tablet) {
+      display: none;
+      pointer-events: none;
+    }
   }
 
   .nav__mobile-contacts-item {
@@ -80,6 +121,7 @@
     background-color: var(--accent-txt-cl);
     border-radius: 5px;
     margin-right: 6px;
+    box-shadow: var(--main-shadow);
   }
 
   .nav__mobile-icon {
