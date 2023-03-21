@@ -1,3 +1,77 @@
-<section class="about-us" id="about-us">
-  <div class="container">about us</div>
+<section class="section about-us" id="about-us">
+  <div class="container about-us__container">
+    <div class="about-us__block block-about">
+      <span class="block-about__before-title">Why Choose Us</span>
+      <h2 class="block-about__title">About Us</h2>
+      <p class="block-about__text">
+        The dental clinic "named" has a huge experience and high-quality equipment. The qualified
+        selection of our team and technical equipment provides a wide range of services from
+        treatment to the most complex dental operations, as well as implantations.
+      </p>
+    </div>
+    <div class="about-us__img-wrapper">
+      <picture class="about-us__img">
+        <source
+          srcset="
+            ./assets/images/about-us/about-us-mobile.webp    1x,
+            ./assets/images/about-us/about-us-mobile@2x.webp 2x
+          "
+          media="(max-width: 767px)"
+          type="image/webp"
+        />
+
+        <source
+          srcset="
+            ./assets/images/about-us/about-us-mobile.png    1x,
+            ./assets/images/about-us/about-us-mobile@2x.png 2x
+          "
+          media="(max-width: 767px)"
+          type="image/png"
+        />
+
+        <source
+          srcset="
+            ./assets/images/about-us/about-us-tablet.webp    1x,
+            ./assets/images/about-us/about-us-tablet@2x.webp 2x
+          "
+          media="(max-width: 1279px)"
+          type="image/webp"
+        />
+
+        <source
+          srcset="
+            ./assets/images/about-us/about-us-tablet.png    1x,
+            ./assets/images/about-us/about-us-tablet@2x.png 2x
+          "
+          media="(max-width: 1279px)"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./assets/images/about-us/about-us-desktop.webp    1x,
+            ./assets/images/about-us/about-us-desktop@2x.webp 2x
+          "
+          media="(min-width: 1280px)"
+          type="image/webp"
+        />
+
+        <source
+          srcset="
+            ./assets/images/about-us/about-us-desktop.png    1x,
+            ./assets/images/about-us/about-us-desktop@2x.png 2x
+          "
+          media="(min-width: 1280px)"
+          type="image/png"
+        />
+
+        <img
+          src="./assets/images/about-us/about-us-mobile.png"
+          alt="girl with ginger hair with perfectly white smile sticking"
+          width="272"
+          height="288"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
 </section>
