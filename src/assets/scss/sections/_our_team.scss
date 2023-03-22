@@ -1,6 +1,213 @@
-.svg-arrow {
-  width: 16px;
-  height: 16px;
-  stroke: red;
-  // stroke: var(--accent-txt-cl);
+.our-team {
+  &__container {
+    text-align: center;
+    position: relative;
+  }
+
+  .slick-slide {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 272px;
+    height: auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include mq(tablet) {
+      width: 336px;
+      padding-top: 40px;
+      padding-bottom: 32px;
+
+      &:not(:first-child) {
+        margin-left: 32px;
+      }
+    }
+
+    @include mq(desktop) {
+        width: 384px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+  
+        &:not(:first-child) {
+          margin-left: 32px;
+        }
+      }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+  }
+
+  .slick-dots li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slick-dots li:not(:first-child) {
+    margin-left: 4px;
+    list-style: none;
+  }
+
+  .slick-dots li > button {
+    text-indent: -999em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1px solid var(--normal-bg);
+
+    transition: all var(--fast) var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+      width: 8px;
+      height: 8px;
+      background-color: var(--normal-bg);
+    }
+  }
+
+  .slick-dots .slick-active > button {
+    width: 8px;
+    height: 8px;
+    background-color: var(--normal-bg);
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 8px;
+    line-height: calc(45 / 24);
+
+    @include mq(tablet) {
+      font-size: 32px;
+      margin-top: 16px;
+    }
+
+    @include mq(desktop) {
+        font-size: 48px;
+        font-weight: 800;
+        line-height: calc(48 / 45);
+      }
+  }
+
+  &__undertitle {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--normal-bg);
+  }
+
+  &__next-icon {
+    stroke: var(--normal-bg);
+    transition: stroke var(--fast) var(--transition-timing-function);
+  }
+
+  &__next,
+  &__prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: var(--main-shadow);
+    position: absolute;
+    top: 217px;
+    background-color: var(--accent-txt-cl);
+    z-index: 100;
+
+    transition: background-color var(--fast) var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+      background-color: var(--normal-bg);
+    }
+
+    &:hover .our-team__next-icon,
+    &:focus .our-team__next-icon {
+      stroke: white;
+    }
+
+    @include mq(tablet) {
+      top: 273px;
+    }
+    @include mq(desktop) {
+        top: 317px;
+      }
+  }
+
+  &__next {
+    right: 24px;
+
+    @include mq(tablet) {
+      right: 32px;
+    }
+  }
+
+  .our-team__pic-wrapper {
+    width: 272px;
+    height: 272px;
+    background-image: url('../images/our-team/our-team-bg-mob.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(tablet) {
+      width: 336px;
+      height: 336px;
+      background-image: url('../images/our-team/our-team-bg-tab.svg');
+    }
+
+    @include mq(desktop) {
+        width: 384px;
+        height: 384px;
+        background-image: url('../images/our-team/our-team-bg-desk.svg');
+      }
+  }
+
+  &__img {
+    @include mq(tablet) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text-wrapper {
+    margin-top: 16px;
+    padding: 14px 34px;
+    border-radius: 15px;
+    background-color: var(--accent-txt-cl);
+    box-shadow: 0px 2.9916px 2.9916px rgba(187, 187, 187, 0.25);
+
+    @include mq(tablet) {
+      margin-top: 20px;
+      padding: 20px 35px;
+    }
+
+    @include mq(desktop) {
+        margin-top: 24px;      }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(18 / 16);
+
+    @include mq(tablet) {
+      font-size: 24px;
+      line-height: calc(24 / 24);
+    }
+  }
+
+  &__slide-title {
+    font-size: 12px;
+    margin-top: 8px;
+    color: var(--secondary-txt-cl);
+
+    @include mq(tablet) {
+      font-size: 16px;
+      margin-top: 12px;
+    }
+  }
 }

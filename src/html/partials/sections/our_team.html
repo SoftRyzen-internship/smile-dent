@@ -1,13 +1,283 @@
-<section class="our-team" id="team" style="height: 1000px;">
-  <div class="container">
-    Our team
-    <div>
-      <svg class="svg-arrow" aria-label="arrow-left">
-        <use xlink:href="./assets/images/sprite.svg#icon-arrow-left"></use>
+<section class="section our-team" id="team">
+  <div class="container our-team__container">
+    <span class="our-team__undertitle">Our Team</span>
+    <h2 class="our-team__title">Our Awesome Team</h2>
+    <button class="our-team__next" aria-label="next slide">
+      <svg class="our-team__next-icon" class width="16" height="16">
+        <use href="./assets/images/sprite.svg#icon-arrow-right"></use>
       </svg>
-      <svg class="svg-arrow" aria-label="arrow-right">
-        <use xlink:href="./assets/images/sprite.svg#icon-arrow-right"></use>
+    </button>
+    <button class="our-team__prev" aria-label="previous slide">
+      <svg class="our-team__next-icon" class width="16" height="16">
+        <use href="./assets/images/sprite.svg#icon-arrow-left"></use>
       </svg>
+    </button>
+    
+    <div class="our-team__slider">
+      <div class="our-team__img-wrapper">
+        <div class="our-team__pic-wrapper">
+          <picture>
+            <source
+              srcset="
+                ./assets/images/our-team/henry-lorom-mob.webp    1x,
+                ./assets/images/our-team/henry-lorom-mob@2x.webp 2x
+              "
+              media="(max-width: 767px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/henry-lorom-mob.png    1x,
+                ./assets/images/our-team/henry-lorom-mob@2x.png 2x
+              "
+              media="(max-width: 767px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/henry-lorom-tab.webp    1x,
+                ./assets/images/our-team/henry-lorom-tab@2x.webp 2x
+              "
+              media="(max-width: 1279px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/henry-lorom-tab.png    1x,
+                ./assets/images/our-team/henry-lorom-tab@2x.png 2x
+              "
+              media="(max-width: 1279px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/henry-lorom-desk.webp    1x,
+                ./assets/images/our-team/henry-lorom-desk@2x.webp 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/henry-lorom-desk.png    1x,
+                ./assets/images/our-team/henry-lorom-desk@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/png"
+            />
+            <img
+              width="230"
+              height="252"
+              class="our-team__img"
+              src="./assets/images/our-team/henry-lorom-mob.png"
+              alt="Henry Lorom"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+        <div class="our-team__text-wrapper">
+          <h3 class="our-team__name">Dr. Henry Lorom</h3>
+          <p class="our-team__slide-title">Surgery specialist</p>
+        </div>
+      </div>
+      <div class="our-team__img-wrapper">
+        <div class="our-team__pic-wrapper">
+          <picture>
+            <source
+              srcset="
+                ./assets/images/our-team/mary-stanley-mob.webp    1x,
+                ./assets/images/our-team/mary-stanley-mob@2x.webp 2x
+              "
+              media="(max-width: 767px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/mary-stanley-mob.png    1x,
+                ./assets/images/our-team/mary-stanley-mob@2x.png 2x
+              "
+              media="(max-width: 767px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/mary-stanley-tab.webp    1x,
+                ./assets/images/our-team/mary-stanley-tab@2x.webp 2x
+              "
+              media="(max-width: 1279px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/mary-stanley-tab.png    1x,
+                ./assets/images/our-team/mary-stanley-tab@2x.png 2x
+              "
+              media="(max-width: 1279px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/mary-stanley-desk.webp    1x,
+                ./assets/images/our-team/mary-stanley-desk@2x.webp 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/mary-stanley-desk.png    1x,
+                ./assets/images/our-team/mary-stanley-desk@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/png"
+            />
+            <img
+              width="194"
+              height="253"
+              class="our-team__img"
+              src="./assets/images/our-team/mary-stanley-mob.png"
+              alt="Mary Stanley"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+        <div class="our-team__text-wrapper">
+          <h3 class="our-team__name">Dr. Mary Stanley</h3>
+          <p class="our-team__slide-title">Orthopedic surgeon</p>
+        </div>
+      </div>
+      <div class="our-team__img-wrapper">
+        <div class="our-team__pic-wrapper">
+          <picture>
+            <source
+              srcset="
+                ./assets/images/our-team/ben-stone-mob.webp    1x,
+                ./assets/images/our-team/ben-stone-mob@2x.webp 2x
+              "
+              media="(max-width: 767px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/ben-stone-mob.png    1x,
+                ./assets/images/our-team/ben-stone-mob@2x.png 2x
+              "
+              media="(max-width: 767px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/ben-stone-tab.webp    1x,
+                ./assets/images/our-team/ben-stone-tab@2x.webp 2x
+              "
+              media="(max-width: 1279px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/ben-stone-tab.png    1x,
+                ./assets/images/our-team/ben-stone-tab@2x.png 2x
+              "
+              media="(max-width: 1279px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/ben-stone-desk.webp    1x,
+                ./assets/images/our-team/ben-stone-desk@2x.webp 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/ben-stone-desk.png    1x,
+                ./assets/images/our-team/ben-stone-desk@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/png"
+            />
+            <img
+            width="263"
+            height="230"
+              class="our-team__img"
+              src="./assets/images/our-team/ben-stone-mob.png"
+              alt="Ben Stone"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+        <div class="our-team__text-wrapper">
+          <h3 class="our-team__name">Dr. Ben Stone</h3>
+          <p class="our-team__slide-title">Anesthesiologist</p>
+        </div>
+      </div>
+      <div class="our-team__img-wrapper">
+        <div class="our-team__pic-wrapper">
+          <picture>
+            <source
+              srcset="
+                ./assets/images/our-team/theresa-mello-mob.webp    1x,
+                ./assets/images/our-team/theresa-mello-mob@2x.webp 2x
+              "
+              media="(max-width: 767px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/theresa-mello-mob.png    1x,
+                ./assets/images/our-team/theresa-mello-mob@2x.png 2x
+              "
+              media="(max-width: 767px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/theresa-mello-tab.webp    1x,
+                ./assets/images/our-team/theresa-mello-tab@2x.webp 2x
+              "
+              media="(max-width: 1279px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/theresa-mello-tab.png    1x,
+                ./assets/images/our-team/theresa-mello-tab@2x.png 2x
+              "
+              media="(max-width: 1279px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/theresa-mello-desk.webp    1x,
+                ./assets/images/our-team/theresa-mello-desk@2x.webp 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/our-team/theresa-mello-desk.png    1x,
+                ./assets/images/our-team/theresa-mello-desk@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/png"
+            />
+            <img
+            width="182"
+            height="260"
+              class="our-team__img"
+              src="./assets/images/our-team/theresa-mello-mob.png"
+              alt="Theresa Mello"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+        <div class="our-team__text-wrapper">
+          <h3 class="our-team__name">Dr. Theresa Millo</h3>
+          <p class="our-team__slide-title">Dentist</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
