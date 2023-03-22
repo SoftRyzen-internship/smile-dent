@@ -1,0 +1,72 @@
+.popup-social {
+  &__wrapper {
+    top: 50%;
+    padding: 32px 44px;
+    @include mq(tablet) {
+      padding: 40px 123px;
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+    white-space: nowrap;
+    @include mq(tablet) {
+      font-weight: 800;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+    @include mq(desktop) {
+      top: 30%;
+    }
+  }
+  &__svg-close {
+    display: block;
+    width: 16px;
+    height: 16px;
+    stroke: var(--primary-txt-cl);
+  }
+  &__position-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    outline: none;
+    &:hover,
+    &:focus {
+      svg {
+        stroke: var(--hover-bg);
+      }
+    }
+    &:active {
+      svg {
+        stroke: var(--active-bg);
+      }
+    }
+    @include mq(tablet) {
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
+.modal-social-content {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--accent-txt-cl);
+  border-radius: 20px;
+  transition: transform 0.3s linear 0.2s;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .is-hidden & {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
