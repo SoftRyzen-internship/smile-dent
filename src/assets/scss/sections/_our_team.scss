@@ -11,8 +11,7 @@
     justify-content: center;
     width: 272px;
     height: auto;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0;
 
     @include mq(tablet) {
       width: 336px;

@@ -1,1 +1,115 @@
-// our_reviews
+.our-reviews {
+
+    .slick-track {
+        margin-left: 24px;
+        padding-left: 22px;
+        padding-bottom: 24px;
+
+        @include mq(tablet) {
+            padding-bottom: 32px;
+        }
+
+        @include mq(desktop) {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__container {
+        text-align: center;
+    }
+
+    &__prev,
+    &__next {
+        top: 102px;
+    }
+
+    &__next {
+        right: 0;
+    }
+
+    &__slider-wrapper {
+        position: relative;
+    }
+
+    &__slider {
+        margin-top: 24px;
+
+        @include mq(tablet) {
+            margin-top: 40px;
+        }
+
+        @include mq(desktop) {
+            margin-top: 60px;
+        }
+    }
+
+    &__slide {
+        width: 232px;
+        padding: 24px 22px 24px 24px;
+        background-color: var(--accent-txt-cl);
+        border-radius: 20px;
+        text-align: left;
+        box-shadow: var(--main-shadow);
+        margin-left: 26px;
+
+        @include mq(tablet) {
+            width: 316px;
+            padding: 24px 22px 24px 32px;
+            margin-left: 32px;
+        }
+
+        @include mq(desktop) {
+            width: 364px;
+            margin-left: 42px;
+        }
+    }
+
+    &__stars-wrapper {
+        margin-bottom: 16px;
+
+        @include mq(tablet) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: calc(25 / 12);
+        color: var(--secondary-txt-cl);
+
+        @include mq(tablet) {
+            font-size: 14px;
+            line-height: calc(30 / 14);
+        }
+    }
+
+    &__info-wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+
+        @include mq(tablet) {
+            margin-top: 20px;
+        }
+    }
+
+    &__text-block {
+        margin-left: 16px;
+    }
+
+    &__name {
+        font-weight: 600;
+        line-height: calc(17 / 14);
+    }
+
+    &__mail {
+        font-size: 12px;
+        color: var(--secondary-txt-cl);
+        margin-top: 5px;
+    }
+
+    .icon-star {
+        font-size: 20px;
+        color: var(--normal-bg);
+    }
+}
