@@ -1,8 +1,11 @@
 .our-team {
   &__container {
     text-align: center;
-    position: relative;
   }
+
+  &__slider-wrapper {
+    position: relative;
+  } 
 
   .slick-slide {
     display: flex !important;
@@ -53,9 +56,16 @@
   }
 
   &__undertitle {
+    font-family: var(--second-font);
     font-weight: 600;
     text-transform: uppercase;
     color: var(--normal-bg);
+    line-height: calc(24 / 14);
+
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: calc(24 / 16);
+    }
   }
 
   &__next-icon {
@@ -65,22 +75,18 @@
 
   &__next,
   &__prev {
-    top: 217px;
+    top: 140px;
 
     @include mq(tablet) {
-      top: 273px;
+      top: 188px;
     }
     @include mq(desktop) {
-        top: 317px;
+        top: 232px;
       }
   }
 
   &__next {
-    right: 24px;
-
-    @include mq(tablet) {
-      right: 32px;
-    }
+    right: 0;
   }
 
   .our-team__pic-wrapper {

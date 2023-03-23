@@ -163,22 +163,32 @@
 }
 
 .hero__img-wrapper-first {
-  border: 2px dashed var(--normal-bg);
+  background-image: url('../images/hero/hero-bg1-mob.svg');
   left: 3px;
-  animation: 100s /* var(--transition-timing-function) */ linear infinite rot;
+  animation: 100s linear infinite rot;
+
+  @include mq(tablet) {
+    background-image: url('../images/hero/hero-bg1-tab.svg');
+  }
 
   @include mq(desktop) {
     left: 7px;
+    background-image: url('../images/hero/hero-bg1-desk.svg');
   }
 }
 
 .hero__img-wrapper-second {
-  border: 1px dashed var(--hover-bg);
+  background-image: url('../images/hero/hero-bg2-mob.svg');
   left: 7px;
-  animation: 100s /* var(--transition-timing-function) */ linear infinite rotInverse;
+  animation: 100s linear infinite rotInverse;
+
+  @include mq(tablet) {
+    background-image: url('../images/hero/hero-bg2-tab.svg');
+  }
 
   @include mq(desktop) {
     left: 16px;
+    background-image: url('../images/hero/hero-bg2-desk.svg');
   }
 }
 
