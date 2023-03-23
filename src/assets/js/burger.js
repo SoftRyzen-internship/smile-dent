@@ -24,8 +24,6 @@ overlay.addEventListener('click', e => {
   document.body.style.overflow = '';
 });
 
-window.addEventListener('keydown', closeByEsc);
-
 function closeByEsc(e) {
   if (e.code === 'Escape') {
     overlay.classList.add('mobile-menu-overlay--is-hidden');
@@ -34,6 +32,7 @@ function closeByEsc(e) {
     document.body.style.overflow = '';
   }
 }
+window.addEventListener('keydown', closeByEsc);
 
 menu.addEventListener('click', e => {
   if (e.target.closest('.nav__mobile-link')) {

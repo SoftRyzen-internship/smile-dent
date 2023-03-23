@@ -23,3 +23,25 @@
     max-width: 176px;
   }
 }
+
+.slider__btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: var(--main-shadow);
+  position: absolute;
+  background-color: var(--accent-txt-cl);
+  z-index: 100;
+
+  transition: background-color var(--fast) var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--normal-bg);
+  }
+
+  &:hover .our-team__next-icon,
+  &:focus .our-team__next-icon {
+    stroke: white;
+  }
+}
