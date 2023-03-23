@@ -1,6 +1,6 @@
 const socialModal = document.getElementById('social-modal');
 const closeSocialBtn = document.getElementById('close-social-btn');
-const openPopupSocial = document.querySelectorAll('.footer-social__button');
+const openPopupSocial = document.querySelectorAll('.footer-social__button, [data-social]');
 const bodySocial = document.querySelector('body');
 
 openPopupSocial.forEach(function (social) {
