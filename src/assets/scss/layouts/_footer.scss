@@ -1,11 +1,256 @@
-// footer
-.svg-email {
-  fill: var(--accent-txt-cl);
-  stroke: var(--normal-bg);
-  width: 20px;
-  height: 20px;
+.footer {
+  background-color: var(--footer-bg);
+  @include mq(mobile-only) {
+    padding-top: 40px;
+    padding-bottom: 16px;
+    text-align: center;
+  }
+  @include mq(tablet) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include mq(tablet) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &__container {
+    @include mq(desktop) {
+      position: relative;
+    }
+  }
+  &__logo {
+    @include mq(mobile-only) {
+      margin-bottom: 18px;
+    }
+    @include mq(tablet-only) {
+      margin-bottom: 12px;
+    }
+    @include mq(desktop) {
+      position: absolute;
+      left: 33px;
+      top: 0;
+    }
+  }
+
+  &__svg-logo {
+    display: inline-block;
+    width: 72px;
+    height: 23px;
+    @include mq(desktop) {
+      display: inline-block;
+      width: 104px;
+      height: 32px;
+    }
+  }
+
+  &__block {
+    @include mq(tablet-only) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include mq(desktop) {
+      display: flex;
+      justify-content: flex-start;
+      width: 905px;
+      margin-left: 311px;
+    }
+  }
+  &__block-email {
+    @include mq(tablet) {
+      width: 280px;
+    }
+  }
+  &__block-copy {
+    @include mq(tablet) {
+      text-align: right;
+    }
+  }
+  &__form-group {
+    display: flex;
+    height: 48px;
+    position: relative;
+  }
+
+  &__form-input {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2.16;
+    padding-right: 10px;
+    padding-left: 20px;
+    border: 1px solid var(--primary-txt-cl);
+    border-radius: 5px 0px 0px 5px;
+    background-color: var(--footer-bg);
+    border-right-color: transparent;
+    &:focus {
+      outline: none;
+      border-color: var(--hover-bg);
+    }
+  }
+  &__form-error {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--error-txt-cl);
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+  }
+
+  &__svg-email {
+    fill: var(--accent-txt-cl);
+    stroke: var(--normal-bg);
+    width: 20px;
+    height: 20px;
+  }
 }
-.svg-logo {
-  width: 104px;
-  height: 32px;
+
+.footer-navigation {
+  @include mq(mobile-only) {
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    font-weight: 500;
+    line-height: 1.14;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  &__link {
+    &:hover,
+    &:focus {
+      color: var(--hover-bg);
+    }
+    &:active {
+      color: var(--active-bg);
+    }
+  }
+}
+.footer-title {
+  margin-bottom: 7px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.33;
+  @include mq(tablet) {
+    margin-bottom: 12px;
+  }
+}
+.footer-social {
+  @include mq(mobile-only) {
+    margin-bottom: 24px;
+  }
+  @include mq(desktop) {
+    margin-left: 205px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @include mq(tablet-only) {
+      flex-wrap: wrap;
+      width: 80px;
+      gap: 8px;
+      align-items: center;
+      margin: auto;
+    }
+    @include mq(desktop) {
+      gap: 8px;
+    }
+  }
+
+  &__item {
+    @include mq(mobile-only) {
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+  &__button {
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--normal-bg);
+    font-size: 20px;
+    line-height: 0;
+    color: var(--accent-txt-cl);
+    outline: none;
+    &:hover,
+    &:focus {
+      background-color: var(--hover-bg);
+    }
+    &:active {
+      background-color: var(--active-bg);
+    }
+  }
+}
+
+.footer-subscribe {
+  position: relative;
+  @include mq(mobile-only) {
+    margin-bottom: 40px;
+  }
+  @include mq(tablet) {
+    margin-bottom: 30px;
+    min-width: 280px;
+  }
+  @include mq(desktop) {
+    margin-left: 148px;
+  }
+
+  &__text {
+    font-weight: 500;
+    line-height: 1.71;
+    @include mq(mobile-only) {
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    @include mq(tablet) {
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.footer-btn {
+  min-width: 48px;
+  height: 48px;
+  background-color: var(--normal-bg);
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  transition: var(--fast) ease-out;
+  &:hover,
+  &:focus {
+    background-color: var(--hover-bg);
+    svg {
+      stroke: var(--hover-bg);
+    }
+  }
+  &:active {
+    background-color: var(--active-bg);
+    svg {
+      stroke: var(--active-bg);
+    }
+  }
+}
+.footer-copy {
+  &__span {
+    font-weight: 300;
+
+    letter-spacing: 0.1px;
+    opacity: 0.7;
+    @include mq(mobile-only) {
+      font-size: 10px;
+      line-height: 1.8;
+    }
+    @include mq(tablet) {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
 }

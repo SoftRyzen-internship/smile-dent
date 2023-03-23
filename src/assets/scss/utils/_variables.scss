@@ -1,15 +1,17 @@
 :root {
-   /* TEXT COLORS */
-  --accent-txt-cl: #FFFFFF;
-  --primary-txt-cl: #4B5563;
+  /* TEXT COLORS */
+  --accent-txt-cl: #ffffff;
+  --primary-txt-cl: #4b5563;
   --secondary-txt-cl: #637381;
+  --error-txt-cl: #fc6060;
 
   /* BACKGROUND COLORS */
-  --primary-bg: #EBF8FF;
-  --normal-bg: #6E6BD9;
-  --hover-bg: #1FA6B4;
-  --active-bg: #6360C1;
-  --footer-bg: #E1F5FF;
+  --primary-bg: #ebf8ff;
+  --normal-bg: #6e6bd9;
+  --hover-bg: #1fa6b4;
+  --active-bg: #6360c1;
+  --footer-bg: #e1f5ff;
+  --backdrop-bg: rgba(235, 248, 255, 0.8);
 
   /* SHADOW */
 
