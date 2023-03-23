@@ -1,1 +1,182 @@
-// our_service
+.our-service {
+  text-align: center;
+  .slick-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    @include mq(mobile-only) {
+      &:not(:first-child) {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  .slick-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slick-dots li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8px;
+    list-style: none;
+  }
+
+  .slick-dots li:not(:first-child) {
+    margin-left: 4px;
+    list-style: none;
+  }
+
+  .slick-dots li > button {
+    text-indent: -999em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1px solid var(--normal-bg);
+    transition: all var(--fast) var(--transition-timing-function);
+    &:hover,
+    &:focus {
+      width: 8px;
+      height: 8px;
+      background-color: var(--normal-bg);
+    }
+  }
+
+  .slick-dots .slick-active > button {
+    width: 8px;
+    height: 8px;
+    background-color: var(--normal-bg);
+  }
+  @include mq(mobile-only) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include mq(tablet-only) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include mq(desktop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  &__before-title {
+    font-family: var(--second-font);
+    font-weight: 600;
+    line-height: 1.71;
+    text-transform: uppercase;
+    color: var(--normal-bg);
+    display: block;
+    @include mq(mobile-only) {
+      margin-bottom: 8px;
+    }
+    @include mq(tablet) {
+      margin-bottom: 16px;
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+    }
+  }
+  &__title {
+    @include mq(mobile-only) {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.875;
+
+      margin-bottom: 24px;
+    }
+    @include mq(tablet-only) {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 40px;
+    }
+    @include mq(desktop) {
+      font-size: 48px;
+      line-height: 0.93;
+      font-weight: 800;
+      margin-bottom: 60px;
+    }
+  }
+  &__slider {
+    @include mq(tablet-only) {
+      display: grid;
+      grid-template-columns: repeat(2, 336px);
+      grid-template-rows: repeat(3, 341px);
+      grid-gap: 32px;
+    }
+    @include mq(desktop) {
+      display: grid;
+      grid-template-columns: repeat(3, 384px);
+      grid-template-rows: repeat(2, 341px);
+      grid-gap: 32px;
+    }
+  }
+  &__img-wrapper {
+    border-radius: 20px;
+    background-color: var(--accent-txt-cl);
+    @include mq(mobile-only) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 272px;
+      min-height: 350px;
+      padding-top: 24px;
+    }
+    @include mq(tablet-only) {
+      padding: 24px 14px 48px 14px;
+    }
+    @include mq(desktop) {
+      padding: 24px 16px 72px 16px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 20px;
+  }
+  &__btn {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    @include mq(mobile-only) {
+      margin-top: 24px;
+    }
+
+    @include mq(tablet) {
+      margin-top: 40px;
+    }
+  }
+}
+.block-card {
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    display: block;
+    font-family: var(--second-font);
+    font-weight: 500;
+    line-height: 1.71;
+    color: var(--secondary-txt-cl);
+    @include mq(mobile-only) {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+    @include mq(tablet) {
+      line-height: 1.5;
+      font-size: 16px;
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+    }
+  }
+}
