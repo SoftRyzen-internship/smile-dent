@@ -1,1 +1,194 @@
-// form
+.form {
+  position: relative;
+  background-color: var(--accent-txt-cl);
+  border-radius: 20px;
+  @include mq(mobile-only) {
+    width: 272px;
+    height: 443px;
+    padding: 24px 12px 0px 12px;
+  }
+  @include mq(tablet) {
+    width: 488px;
+    height: 507px;
+    padding: 40px 40px 0px 40px;
+  }
+  &__block-top {
+    text-align: center;
+    @include mq(mobile-only) {
+      margin-bottom: 24px;
+    }
+    @include mq(tablet) {
+      margin-bottom: 40px;
+    }
+  }
+  &__block-title {
+    @include mq(mobile-only) {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.75;
+    }
+    @include mq(tablet) {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+  }
+  &__menu {
+    @include mq(mobile-only) {
+      margin-bottom: 30px;
+    }
+    @include mq(tablet) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__line {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 68px;
+    color: var(--primary-txt-cl);
+    border: none;
+    border-bottom: 1px solid var(--border-form);
+    outline: none;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: calc(20 / 12);
+    padding-top: 33px;
+  }
+
+  &__input:focus ~ .form__label,
+  &__input:not(:placeholder-shown) ~ .form__label {
+    top: -4px;
+    left: 0;
+    font-size: 14px;
+  }
+
+  &__label {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    color: var(--secondary-txt-cl);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.66;
+    pointer-events: none;
+    transition: all var(--transition-timing-function) var(--slow);
+    background: transparent;
+    @include mq(tablet) {
+      top: 9px;
+      font-size: 18px;
+    }
+  }
+
+  &__box {
+    text-align: center;
+  }
+
+  &__button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    width: 248px;
+  }
+
+  &__error {
+    font-size: 12px;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    color: var(--error-txt-cl);
+    visibility: hidden;
+  }
+}
+
+.form__input.error__input {
+  border-bottom: 1px solid var(--error-txt-cl);
+}
+
+.form__input.success__input {
+  border-bottom: 1px solid var(--primary-txt-cl);
+}
+
+.form__input.error__input ~ .form__error {
+  visibility: visible;
+}
+
+.form__svg-icon {
+  width: 24px;
+  height: 24px;
+  &:hover,
+  &:focus {
+    stroke: var(--hover-bg);
+  }
+  &:active {
+    stroke: var(--active-bg);
+  }
+}
+
+.form-content {
+  transform: scale(1);
+  transition: all 0.3s linear 0.2s;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .is-hidden & {
+    transform: scale(0.4);
+  }
+}
+
+.form-success {
+  transition: all 0.3s linear 0.2s;
+  visibility: visible;
+  opacity: 1;
+  &__btn {
+    position: absolute;
+    @include mq(mobile-only) {
+      top: 16px;
+      right: 16px;
+    }
+    @include mq(tablet) {
+      top: 8px;
+      right: 8px;
+    }
+  }
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap;
+    @include mq(mobile-only) {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: calc(35 / 20);
+    }
+    @include mq(tablet) {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: calc(35 / 28);
+    }
+  }
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .is-hidden & {
+    transform: scale(0.4);
+  }
+}

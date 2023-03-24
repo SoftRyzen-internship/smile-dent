@@ -248,3 +248,25 @@
     }
   }
 }
+
+.booking__form {
+  position: absolute;
+
+  @include mq(mobile-only) {
+    top: -467px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include mq(tablet-only) {
+    top: -547px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include mq(desktop) {
+    top: -246px;
+    right: 0;
+  }
+}
+.booking__container {
+  position: relative;
+}

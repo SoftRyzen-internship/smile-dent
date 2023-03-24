@@ -1,1 +1,59 @@
-<!-- modal -->
+<div class="backdrop modal is-hidden" id="open-form-modal">
+  <div class="modal__wrapper modal-form-content">
+    <button id="close-modal-btn" type="button" class="modal__position-btn">
+      <svg class="modal__svg-close" aria-label="close">
+        <use xlink:href="./assets/images/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+    <form action="#" class="form" id="form-book-modal" name="form" enctype="multipart/form-data">
+      <div id="form-content" class="form-content">
+        <div class="form__block-top">
+          <h2 class="form__block-title">Book an appointment</h2>
+        </div>
+        <div class="form__menu">
+          <div class="form__line">
+            <input
+              class="form__input"
+              id="modal-name"
+              name="name"
+              type="text"
+              placeholder=" "
+              data-reg="^[a-zA-Z][a-zA-Z-\s]{1,62}$"
+            />
+            <label class="form__label form__label--name" for="name">Full Name*</label>
+            <p class="form__error">Name is required</p>
+          </div>
+          <div class="form__line">
+            <input
+              class="form__input"
+              id="modal-email-book"
+              name="email"
+              type="text"
+              placeholder=" "
+              data-reg="^[^!#$%&'*+/=?^_{|}~]+@[^\s@]+\.[a-zA-Z]{2,4}$"
+            />
+            <label class="form__label form__label--email" for="email">Email*</label>
+            <p class="form__error">Email is required</p>
+          </div>
+          <div class="form__line">
+            <input
+              class="form__input"
+              id="modal-phone"
+              name="phone"
+              type="tel"
+              placeholder=" "
+              data-reg="\+?\d{6}"
+            />
+            <label class="form__label form__label--phone" for="phone">Phone*</label>
+            <p class="form__error">Number in format +44 YYYY XXXXXX</p>
+          </div>
+        </div>
+        <div class="form__box">
+          <button type="submit" class="btn-form form__button" aria-label="send-request">
+            <span>Book now</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
