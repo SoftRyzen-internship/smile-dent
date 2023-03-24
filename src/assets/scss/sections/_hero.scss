@@ -138,7 +138,6 @@
   @include mq(desktop) {
     width: 592px;
     height: 592px;
-    margin-top: 28px;
   }
 }
 
@@ -316,7 +315,6 @@
   }
 
   .hero__label {
-    font-size: 14px;
     font-weight: 600;
     line-height: calc(24 / 14);
   }
