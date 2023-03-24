@@ -1,3 +1,5 @@
+import { clearModalForm } from './formModal';
+
 const formModal = document.getElementById('open-form-modal');
 const closeModalBtn = document.getElementById('close-modal-btn');
 const openModal = document.querySelectorAll('[data-book]');
@@ -18,6 +20,7 @@ closeModalBtn.addEventListener('click', event => {
 function handleKeySocial(e) {
   if (!formModal.classList.contains('is-hidden')) {
     if (e.key === 'Escape') {
+      clearModalForm();
       addIshiddenModal();
     }
   }
@@ -26,6 +29,7 @@ function handleKeySocial(e) {
 
 function handleCloseSocial(e) {
   if (e.target === e.currentTarget) {
+    clearModalForm();
     addIshiddenModal();
   }
   return;
@@ -40,4 +44,7 @@ export function openModalForm() {
 }
 document.addEventListener('keydown', handleKeySocial);
 formModal.addEventListener('mousedown', handleCloseSocial);
-closeModalBtn.addEventListener('click', addIshiddenModal);
+closeModalBtn.addEventListener('click', () => {
+  clearModalForm();
+  addIshiddenModal();
+});

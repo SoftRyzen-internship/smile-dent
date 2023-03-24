@@ -1,5 +1,5 @@
-const mask = selector => {
-  let setCursorPosition = (pos, elem) => {
+class Mask {
+  setCursorPosition(pos, elem) {
     elem.focus();
 
     if (elem.setSelectionRange) {
@@ -12,9 +12,9 @@ const mask = selector => {
       range.moveStart('character', pos);
       range.select();
     }
-  };
+  }
 
-  function createMask(event) {
+  createMask(event) {
     let matrix = '+44 ____ ______',
       i = 0,
       def = matrix.replace(/\D/g, ''),
@@ -33,15 +33,23 @@ const mask = selector => {
         this.value = '';
       }
     } else {
-      setCursorPosition(this.value.length, this);
+      this.setCursorPosition(this.value.length, this);
     }
   }
+}
 
-  let input = document.querySelector(selector);
-
-  input.addEventListener('input', createMask);
-  input.addEventListener('blur', createMask);
-  input.addEventListener('focus', createMask);
+const mask = () => {
+  let forms = document.getElementsByTagName('form');
+  for (let i = 0; i < forms.length; i++) {
+    let inputs = forms[i].querySelectorAll('[name="phone"]');
+    for (let j = 0; j < inputs.length; j++) {
+      let input = inputs[j];
+      let maskObj = new Mask();
+      input.addEventListener('input', maskObj.createMask.bind(input));
+      input.addEventListener('blur', maskObj.createMask.bind(input));
+      input.addEventListener('focus', maskObj.createMask.bind(input));
+    }
+  }
 };
 
-mask('[name="phone"]');
+mask();
