@@ -312,6 +312,7 @@
 
   .hero__info-wrapper {
     margin-left: 8px;
+    width: 130px;
   }
 
   .hero__label {
@@ -320,6 +321,9 @@
   }
 
   .hero__contacts-title {
+    display: block;
     color: var(--secondary-txt-cl);
+    font-weight: 500;
+    line-height: calc(24 / 14);
   }
 }
