@@ -1,7 +1,7 @@
 <div class="backdrop modal is-hidden" id="open-form-modal">
   <div class="modal__wrapper modal-form-content">
-    <button id="close-modal-btn" type="button" class="modal__position-btn">
-      <svg class="modal__svg-close" aria-label="close">
+    <button id="close-modal-btn" type="button" class="modal__position-btn" aria-label="close">
+      <svg class="modal__svg-close">
         <use xlink:href="./assets/images/sprite.svg#icon-close"></use>
       </svg>
     </button>
@@ -18,7 +18,8 @@
               name="name"
               type="text"
               placeholder=" "
-              data-reg="^[a-zA-Z][a-zA-Z-\s]{1,62}$"
+              maxlength="30"
+              data-reg="^[a-zA-Z][a-zA-Z-\s]{1,29}$"
             />
             <label class="form__label form__label--name" for="modal-name">Full Name*</label>
             <p class="form__error">Name is required</p>
@@ -30,10 +31,11 @@
               name="email"
               type="text"
               placeholder=" "
-              data-reg="^[^!#$%&'*+/=?^_{|}~]+@[^\s@]+\.[a-zA-Z]{2,4}$"
+              maxlength="63"
+              data-reg="^(?![.-])[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$"
             />
             <label class="form__label form__label--email" for="modal-email-book">Email*</label>
-            <p class="form__error">Email is required</p>
+            <p class="form__error">Email is invalid</p>
           </div>
           <div class="form__line">
             <input
