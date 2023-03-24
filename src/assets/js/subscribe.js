@@ -8,7 +8,7 @@ const bodySubscribe = document.querySelector('body');
 emailForm.addEventListener('submit', event => {
   event.preventDefault();
   const email = emailInput.value.trim();
-  const regex = /^[^!#$%&'*+/=?^_{|}~]+@[^\s@]+\.[a-zA-Z]{2,4}$/;
+  const regex = /^(?![.-])[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
   const forbiddenChars = /[<>]/g;
   if (!email) {
     errorMessage.textContent = 'Email is required';

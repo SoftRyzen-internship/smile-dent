@@ -11,7 +11,8 @@
           name="name"
           type="text"
           placeholder=" "
-          data-reg="^[a-zA-Z][a-zA-Z-\s]{1,62}$"
+          maxlength="30"
+          data-reg="^[a-zA-Z][a-zA-Z-\s]{1,29}$"
         />
         <label class="form__label form__label--name" for="name">Full Name*</label>
         <p class="form__error">Name is required</p>
@@ -23,10 +24,11 @@
           name="email"
           type="text"
           placeholder=" "
-          data-reg="^[^!#$%&'*+/=?^_{|}~]+@[^\s@]+\.[a-zA-Z]{2,4}$"
+          maxlength="63"
+          data-reg="^(?![.-])[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$"
         />
         <label class="form__label form__label--email" for="email-book">Email*</label>
-        <p class="form__error">Email is required</p>
+        <p class="form__error">Email is invalid</p>
       </div>
       <div class="form__line">
         <input
@@ -52,8 +54,8 @@
       >Sent!<br />
       We will call you soon</span
     >
-    <button class="form-success__btn" type="button" id="return-form">
-      <svg class="form__svg-icon" aria-label="return">
+    <button class="form-success__btn" type="button" id="return-form" aria-label="return">
+      <svg class="form__svg-icon">
         <use xlink:href="./assets/images/sprite.svg#icon-return"></use>
       </svg>
     </button>

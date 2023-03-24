@@ -108,6 +108,39 @@
         margin-bottom: 24px;
       }
     }
+    .button-navigator {
+      svg {
+        fill: var(--normal-bg);
+      }
+      &:hover,
+      &:focus {
+        background-color: var(--hover-bg);
+        svg {
+          fill: var(--hover-bg);
+        }
+      }
+      &:active {
+        background-color: var(--active-bg);
+        svg {
+          fill: var(--active-bg);
+        }
+      }
+    }
+    button {
+      &:hover,
+      &:focus {
+        background-color: var(--hover-bg);
+        svg {
+          stroke: var(--hover-bg);
+        }
+      }
+      &:active {
+        background-color: var(--active-bg);
+        svg {
+          stroke: var(--active-bg);
+        }
+      }
+    }
   }
 
   &__box-icon {
