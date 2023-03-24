@@ -58,18 +58,22 @@
   border-radius: 10px;
   box-shadow: var(--main-shadow);
   position: absolute;
-  background-color: var(--accent-txt-cl);
+  background-color: var(--normal-bg);
   z-index: 100;
 
   transition: background-color var(--fast) var(--transition-timing-function);
 
   &:hover,
   &:focus {
-    background-color: var(--normal-bg);
+    background-color: var(--hover-bg);
   }
 
   &:hover .our-team__next-icon,
   &:focus .our-team__next-icon {
     stroke: white;
   }
+}
+
+.slider__btn svg {
+  stroke: white;
 }
