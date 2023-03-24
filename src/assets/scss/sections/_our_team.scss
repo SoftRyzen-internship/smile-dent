@@ -121,6 +121,7 @@
   }
 
   &__text-wrapper {
+    width: 209px;
     margin-top: 16px;
     padding: 14px 34px;
     border-radius: 15px;
@@ -128,6 +129,7 @@
     box-shadow: 0px 2.9916px 2.9916px rgba(187, 187, 187, 0.25);
 
     @include mq(tablet) {
+      width: 280px;
       margin-top: 20px;
       padding: 20px 35px;
     }
