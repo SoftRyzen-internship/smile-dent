@@ -15,7 +15,7 @@
   z-index: 199;
 
   @include mq(tablet) {
-    background-color: rgba(235, 248, 255, 0.7);
+    background-color: var(--backdrop-bg);
   }
 
   @include mq(desktop) {
@@ -138,4 +138,3 @@
     margin-top: 4px;
   }
 }
-
