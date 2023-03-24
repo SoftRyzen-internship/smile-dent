@@ -1,25 +1,26 @@
-.backdrop {
-  visibility: visible;
-  opacity: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--backdrop-bg);
-  z-index: 100;
-  overflow: auto;
-  transition: opacity var(--fast);
-
-  &.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-.modal {
+.popup-sent {
+  text-align: center;
   &__wrapper {
     top: 50%;
+    padding: 32px 26px;
+    @include mq(tablet) {
+      padding: 40px 97px;
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+    white-space: nowrap;
+    @include mq(tablet) {
+      font-weight: 800;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+    @include mq(desktop) {
+      top: 30%;
+    }
   }
   &__svg-close {
     display: block;
@@ -31,7 +32,6 @@
     position: absolute;
     top: 12px;
     right: 12px;
-    z-index: 100;
     outline: none;
     &:hover,
     &:focus {
@@ -50,8 +50,7 @@
     }
   }
 }
-
-.modal-form-content {
+.modal-sent {
   visibility: visible;
   opacity: 1;
   position: absolute;

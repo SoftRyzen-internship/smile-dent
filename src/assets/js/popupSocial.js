@@ -34,7 +34,7 @@ function addIshiddenSocial() {
   socialModal.classList.add('is-hidden');
   bodySocial.classList.remove('scroll-hidden');
 }
-function openModalSocial() {
+export function openModalSocial() {
   socialModal.classList.remove('is-hidden');
   bodySocial.classList.add('scroll-hidden');
 }

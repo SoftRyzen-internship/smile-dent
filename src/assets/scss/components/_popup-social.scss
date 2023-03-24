@@ -1,6 +1,7 @@
 .popup-social {
   &__wrapper {
     top: 50%;
+
     padding: 32px 44px;
     @include mq(tablet) {
       padding: 40px 123px;
@@ -64,6 +65,7 @@
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+    display: none;
   }
 
   .is-hidden & {
