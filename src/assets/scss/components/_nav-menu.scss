@@ -65,7 +65,7 @@
 
   .nav__burger {
     position: relative;
-    width: 24px;
+    width: 20px;
     display: flex;
     flex-direction: column;
     transition: all 0.3s;
@@ -80,14 +80,14 @@
   
     .nav__burger-bar:not(:last-child) {
       display: inline-block;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
   }
   
   .nav__burger-bar {
     background-color: var(--primary-txt-cl);
     height: 2px;
-    width: 24px;
+    width: 20px;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
     z-index: 201;
@@ -101,6 +101,11 @@
     height: 2px;
     align-self: center;
     margin-bottom: 0px;
+    width: 15.25px;
+
+    @include mq(tablet) {
+      transform: rotate(45deg) translateX(29%);
+    }
   }
 
   .nav__burger-bar:nth-of-type(2) {
@@ -113,9 +118,14 @@
   .nav__burger-bar:last-child {
     position: relative;
     bottom: 1px;
-    transform: rotate(-45deg) translateX(31%);
+    transform: rotate(-45deg) translateX(30%);
     transition-delay: 0s;
     height: 2px;
     align-self: center;
+    width: 15.25px;
+
+    @include mq(tablet) {
+      transform: rotate(-45deg) translateX(24%);
+    }
   }
 }
