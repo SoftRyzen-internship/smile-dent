@@ -6,7 +6,7 @@
       </svg>
     </button>
     <form action="#" class="form" id="form-book-modal" name="form" enctype="multipart/form-data">
-      <div id="form-content" class="form-content">
+      <div class="form-content">
         <div class="form__block-top">
           <h2 class="form__block-title">Book an appointment</h2>
         </div>
@@ -20,7 +20,7 @@
               placeholder=" "
               data-reg="^[a-zA-Z][a-zA-Z-\s]{1,62}$"
             />
-            <label class="form__label form__label--name" for="name">Full Name*</label>
+            <label class="form__label form__label--name" for="modal-name">Full Name*</label>
             <p class="form__error">Name is required</p>
           </div>
           <div class="form__line">
@@ -32,7 +32,7 @@
               placeholder=" "
               data-reg="^[^!#$%&'*+/=?^_{|}~]+@[^\s@]+\.[a-zA-Z]{2,4}$"
             />
-            <label class="form__label form__label--email" for="email">Email*</label>
+            <label class="form__label form__label--email" for="modal-email-book">Email*</label>
             <p class="form__error">Email is required</p>
           </div>
           <div class="form__line">
@@ -44,7 +44,7 @@
               placeholder=" "
               data-reg="\+?\d{6}"
             />
-            <label class="form__label form__label--phone" for="phone">Phone*</label>
+            <label class="form__label form__label--phone" for="modal-phone">Phone*</label>
             <p class="form__error">Number in format +44 YYYY XXXXXX</p>
           </div>
         </div>

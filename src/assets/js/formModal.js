@@ -52,3 +52,6 @@ function setSuccessModal(field) {
   field.classList.add('success__input');
   field.classList.remove('error__input');
 }
+export function clearModalForm() {
+  formModalBook.reset();
+}
