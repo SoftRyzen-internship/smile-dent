@@ -9,7 +9,7 @@ btn.addEventListener('click', () => {
   overlay.classList.toggle('mobile-menu-overlay--is-hidden');
 
   if (document.body.style.overflow !== 'hidden') {
-    console.log('true')
+    console.log('true');
     document.body.style.overflow = 'hidden';
   } else {
     document.body.style.overflow = '';
@@ -36,6 +36,12 @@ window.addEventListener('keydown', closeByEsc);
 
 menu.addEventListener('click', e => {
   if (e.target.closest('.nav__mobile-link')) {
+    overlay.classList.add('mobile-menu-overlay--is-hidden');
+    menu.classList.remove('mobile-menu--opened');
+    btn.classList.remove('nav__burger-opened');
+    document.body.style.overflow = '';
+  }
+  if (e.target.closest('.nav__mobile-btn')) {
     overlay.classList.add('mobile-menu-overlay--is-hidden');
     menu.classList.remove('mobile-menu--opened');
     btn.classList.remove('nav__burger-opened');

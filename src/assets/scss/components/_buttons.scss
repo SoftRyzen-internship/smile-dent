@@ -23,6 +23,31 @@
     max-width: 176px;
   }
 }
+.btn-form {
+  display: inline-block;
+  padding: 20px 78px;
+  max-width: 248px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  color: var(--accent-txt-cl);
+  background-color: var(--normal-bg);
+  &:hover,
+  &:focus {
+    background-color: var(--hover-bg);
+  }
+  &:active {
+    background-color: var(--active-bg);
+  }
+
+  @include mq(tablet) {
+    padding: 20px 42px;
+    max-width: 176px;
+  }
+}
 
 .slider__btn {
   width: 40px;
