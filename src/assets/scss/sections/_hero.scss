@@ -67,7 +67,7 @@
     max-width: 239px;
   }
 
-  @include mq(tablet) {
+  @include mq(desktop) {
     bottom: 26px;
   }
 }

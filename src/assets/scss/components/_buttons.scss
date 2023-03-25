@@ -63,17 +63,43 @@
 
   transition: background-color var(--fast) var(--transition-timing-function);
 
-  &:hover,
-  &:focus {
+  /* &:hover {
     background-color: var(--hover-bg);
-  }
+  } */
 
-  &:hover .our-team__next-icon,
-  &:focus .our-team__next-icon {
+  &:hover svg,
+  &:focus svg {
     stroke: white;
   }
 }
 
 .slider__btn svg {
   stroke: white;
+}
+
+.slider__btn-default {
+  background-color: var(--normal-bg);
+}
+
+.slider__btn-hover {
+  background-color: var(--hover-bg);
+}
+
+.slider__btn-focus {
+  background-color: var(--hover-bg);
+}
+
+.slider__btn-click {
+  background-color: var(--active-bg)
+}
+
+.slider__btn-disabled {
+  background-color: white;
+
+  svg {
+    stroke: var(--normal-bg);
+  }
+  &:hover svg {
+    stroke: var(--normal-bg);
+  }
 }
