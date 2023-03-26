@@ -12,6 +12,9 @@ const onBtnsClick = trigger => {
   changeBtnClass(btns, 'mousedown', 'slider__btn-click', 'add');
   changeBtnClass(btns, 'mouseup', 'slider__btn-click');
 
+  changeBtnClass(btns, 'touchstart', 'slider__btn-click', 'add');
+  changeBtnClass(btns, 'touchend', 'slider__btn-click');
+
   changeBtnClass(btns, 'mouseover', 'slider__btn-hover', 'add');
   changeBtnClass(btns, 'mouseout', 'slider__btn-hover');
 
