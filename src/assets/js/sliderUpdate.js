@@ -17,17 +17,22 @@ const sliderUpdate = ({ prevButton, nextButton, slides, slickSlider }) => {
     });
   };
 
-  if (window.innerWidth <= 767) {
-    disableBtns((lastSlide = 1));
-  }
+  function checkWindowWidth() {
+    if (window.innerWidth <= 767) {
+      disableBtns((lastSlide = 1));
+    }
 
-  if (window.innerWidth >= 768) {
-    disableBtns((lastSlide = 2));
-  }
+    if (window.innerWidth >= 768) {
+      disableBtns((lastSlide = 2));
+    }
 
-  if (window.innerWidth >= 1280) {
-    disableBtns((lastSlide = 3));
+    if (window.innerWidth >= 1280) {
+      disableBtns((lastSlide = 3));
+    }
   }
+  checkWindowWidth();
+
+  window.addEventListener('resize', checkWindowWidth)
 };
 
 sliderUpdate({
