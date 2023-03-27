@@ -9,7 +9,7 @@ emailForm.addEventListener('submit', event => {
   event.preventDefault();
   const email = emailInput.value.trim();
   const regex =
-    /^(?![.-])[A-Za-z0-9]+([A-Za-z0-9-]*[A-Za-z0-9])?@[A-Za-z0-9]+(\.[A-Za-z]{2,}){1}(?<![.-])$/;
+    /^(?![.-])[A-Za-z0-9]+([A-Za-z0-9-]*[A-Za-z0-9])?@[A-Za-z0-9]+(\.[A-Za-z]{2,}){1}(?:[^.-]|$)$/i;
 
   const forbiddenChars = /[<>]/g;
   if (!email) {
