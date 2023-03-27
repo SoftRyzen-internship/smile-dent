@@ -97,7 +97,7 @@
 .nav__burger-opened {
 
   .nav__burger-bar:first-child {
-    transform: rotate(45deg) translateX(30%);
+    transform: rotate(45deg) translateX(31%);
     height: 2px;
     align-self: center;
     margin-bottom: 0px;
@@ -118,7 +118,7 @@
   .nav__burger-bar:last-child {
     position: relative;
     bottom: 1px;
-    transform: rotate(-45deg) translateX(30%);
+    transform: rotate(-45deg) translateX(29%);
     transition-delay: 0s;
     height: 2px;
     align-self: center;
