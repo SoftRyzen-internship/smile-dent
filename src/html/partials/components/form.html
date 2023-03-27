@@ -25,7 +25,7 @@
           type="text"
           placeholder=" "
           maxlength="63"
-          data-reg="^(?![.-])[A-Za-z0-9_]+(?<![.-])@[A-Za-z0-9]+(\.[A-Za-z]{2,}){1}(?<![.-])$"
+          data-reg="^(?![.-])[A-Za-z0-9]+([A-Za-z0-9-]*[A-Za-z0-9])?@[A-Za-z0-9]+(\.[A-Za-z]{2,}){1}(?<![.-])$"
         />
         <label class="form__label form__label--email" for="email-book">Email*</label>
         <p class="form__error">Email is invalid</p>
