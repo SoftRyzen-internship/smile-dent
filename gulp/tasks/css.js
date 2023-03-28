@@ -28,7 +28,18 @@ const css = done => {
     )
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(mode.production(gcmq()))
-    .pipe(mode.production(postcss([autoprefixer(), cssnano()])))
+    .pipe(
+      mode.production(
+        postcss([
+          autoprefixer({
+            grid: true,
+            overrideBrowserslist: ['last 2 versions', 'IE >= 11', 'Safari >= 10'],
+            cascade: true,
+          }),
+          cssnano(),
+        ]),
+      ),
+    )
     .pipe(mode.development(sourcemaps.write()))
     .pipe(size({ showFiles: true }))
     .pipe(gulp.dest(paths.build.css));
