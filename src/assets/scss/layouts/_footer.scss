@@ -5,12 +5,12 @@
     padding-bottom: 16px;
     text-align: center;
   }
-  @include mq(tablet) {
-    padding-top: 40px;
+
+  @include mq(tablet-only) {
+    padding-top: 24px;
     padding-bottom: 40px;
   }
-
-  @include mq(tablet) {
+  @include mq(desktop) {
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -24,7 +24,7 @@
       margin-bottom: 18px;
     }
     @include mq(tablet-only) {
-      margin-bottom: 12px;
+      margin-bottom: 18px;
     }
     @include mq(desktop) {
       position: absolute;
@@ -37,7 +37,7 @@
     display: inline-block;
     width: 72px;
     height: 23px;
-    @include mq(desktop) {
+    @include mq(tablet) {
       display: inline-block;
       width: 104px;
       height: 32px;
